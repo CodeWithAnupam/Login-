@@ -1,0 +1,38 @@
+body {
+  background-color: #04030f;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: #bebebe;
+}
+
+.btn {
+  font-size: 1.5rem;
+  color: #1a6e00;
+
+  background: none;
+  border: none;
+
+  /* border: 1px solid #c4ffb2; */
+  align-self: center;
+  padding: .5rem 1rem;
+  /* background-color: #c4ffb2; */
+  transition: all 250ms ease;
+}
+
+/* pseudo class */
+.btn:hover {
+  z-index: 999;
+  color: #001b2e;
+  background-color: #c4ffb2;
+  box-shadow: 0 0 5px #c4ffb2,
+              0 0 25px #c4ffb2,
+              0 0 50px #c4ffb2,
+              0 0 100px #c4ffb2;
+}
+
