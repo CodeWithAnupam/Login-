@@ -1,38 +1,118 @@
 body {
-  background-color: #04030f;
-}
 
-.main {
-  height: 100vh;
+  background-image: url("https://storge.pic2.me/upload/708/5841e59169fc7.jpg");
+  background-repeat: no-repeat;
+  /* background-position: center center; */
+  background-size: cover;
+}
+* {margin: 0; padding: 0;}
+/* .main { */
+/*   height: 100vh; */
+/*   display: flex; */
+/*   justify-content: center; */
+/*   align-content: center; */
+/*   flex-direction: column; */
+/*   color: #bebebe; */
+/* } */
+/* /**/ */
+/* .btn { */
+/*   font-size: 1.5rem; */
+/*   color: #1a6e00; */
+/**/
+/*   background: none;  */
+/*   border: none;  */
+/*   border: 1px solid #c4ffb2;  */
+/*   align-self: center;  */
+/*   padmargin-left: 10%; */
+/*   display: inline-block; */
+/*   background-color: #e76d83; */
+/*   padding: 20px; */
+/*   transform-origin: -100% 50%; */
+/*   transform-origin: bottom right; */
+/*   transform: rotate(-25deg); */
+/**/
+/*   animation-name: slidein; */
+/*   animation-iteration-count: 3; */
+/**/
+/*   transform-origin: bottom right 60px; */
+/*   animation: 5s 1 bigMagic; */
+/*   ding: .5rem 1rem;  */
+/*   background-color: #c4ffb2;  */
+/*   transition: all 250ms ease;  */
+/* }  */
+
+/* pseudo class 
+.btn:hover { 
+  z-index: 999; 
+  color: #001b2e; 
+  background-color: #c4ffb2; 
+  box-shadow: 0 0 5px #c4ffb2, 
+  0 0 25px #c4ffb2, 
+  0 0 50px #c4ffb2, 
+  0 0 100px #c4ffb2; 
+} 
+
+/* p { */
+/*   animation-duration: 3s; */
+/*   animation-name: slidein; */
+/*   animation-iteration-count: infinite; */
+/* } */
+:root {
+  overflow: hidden; /* hides any part of the sun below the horizon */
+  background-color: lightblue;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  color: #bebebe;
+  justify-content: center; /* centers the sun in the background */
 }
 
-.btn {
-  font-size: 1.5rem;
-  color: #1a6e00;
+img {
+  /* background-color: #ffffff; */
+  border-radius: 50%; /* creates a circular background */
+  height: 20vh; /* makes the sun the size of the viewport */
+  aspect-ratio: 1 / 1;
+  animation: 9s linear 0s alternate sun-rise;
 
-  background: none;
-  border: none;
 
-  /* border: 1px solid #c4ffb2; */
-  align-self: center;
-  padding: .5rem 1rem;
-  /* background-color: #c4ffb2; */
-  transition: all 250ms ease;
+
+
 }
 
-/* pseudo class */
-.btn:hover {
-  z-index: 999;
-  color: #001b2e;
-  background-color: #c4ffb2;
-  box-shadow: 0 0 5px #c4ffb2,
-              0 0 25px #c4ffb2,
-              0 0 50px #c4ffb2,
-              0 0 100px #c4ffb2;
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(110vh);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0);
+  }
 }
+/* transform: translate(3ch, 3mm); */
+a {
+
+  display: inline-block;
+  background-color: #000;
+  padding: 20px;
+  margin-left: 10px;
+  transform-origin: +100% 50%;
+  transform-origin: bottom right;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100;
+    width: 300;
+  }
+  to {
+    margin-left: 0;
+    width: 100;
+  }
+
+}
+
 
